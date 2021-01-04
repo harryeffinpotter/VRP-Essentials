@@ -1,0 +1,72 @@
+Running command shell df
+Running command devices
+Filesystem      1K-blocks      Used Available Use% Mounted on
+tmpfs             2971136       704   2970432   1% /dev
+tmpfs             2971136         0   2971136   0% /mnt
+tmpfs             2971136         0   2971136   0% /apex
+/dev/block/dm-4   1641892   1636752         0 100% /
+/dev/block/dm-5    304688    303752         0 100% /vendor
+/dev/block/dm-6 242680204 203125612  39423520  84% /data
+/data/media     242680204 203125612  39423520  84% /storage/emulated
+
+
+
+Running Rclone command: --config .\a listremotes --ask-password=false
+Devices:
+1WMHH820GH0361
+
+
+
+Running command  -s 1WMHH820GH0361 shell df
+Filesystem      1K-blocks      Used Available Use% Mounted on
+tmpfs             2971136       704   2970432   1% /dev
+tmpfs             2971136         0   2971136   0% /mnt
+tmpfs             2971136         0   2971136   0% /apex
+/dev/block/dm-4   1641892   1636752         0 100% /
+/dev/block/dm-5    304688    303752         0 100% /vendor
+/dev/block/dm-6 242680204 203125612  39423520  84% /data
+/data/media     242680204 203125612  39423520  84% /storage/emulated
+
+
+
+Rclone error:  0
+Rclone Output: VRP:
+VRP-mirror10:
+VRP-mirror2:
+VRP-mirror3:
+VRP-mirror4:
+VRP-mirror5:
+VRP-mirror7:
+VRP-mirror8:
+VRP-mirror9:
+VRP-movies:
+
+
+
+Running Rclone command: --config .\a listremotes --ask-password=false
+Rclone error:  0
+Rclone Output: VRP:
+VRP-mirror10:
+VRP-mirror2:
+VRP-mirror3:
+VRP-mirror4:
+VRP-mirror5:
+VRP-mirror7:
+VRP-mirror8:
+VRP-mirror9:
+VRP-movies:
+
+
+
+Loaded following mirrors: 
+VRP-mirror10
+VRP-mirror2
+VRP-mirror3
+VRP-mirror4
+VRP-mirror5
+VRP-mirror7
+VRP-mirror8
+VRP-mirror9
+Running Rclone command: lsf --config .\a --dirs-only "VRP-mirror4:Quest Games" --drive-acknowledge-abuse --ask-password=false
+Rclone error:  0
+Rclone Output: 

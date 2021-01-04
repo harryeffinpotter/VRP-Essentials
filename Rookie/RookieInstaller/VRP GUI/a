@@ -1,0 +1,18 @@
+[VRP-mirror02]
+type = drive
+scope = drive.readonly
+root_folder_id = 1wiLMVBl--cPDL7IoQZBrBWA1R0ePvMqU
+token = {"access_token":"ya29.a0AfH6SMB3Xtc_qVDR7cGnZVKr2DVldvID5dm2VSpQ8nI09iHxTRreiavPstGZ9ZDLmEOF_ZEPhp0ZFOLRHMF9hbQA8piPaVdB52y3TaZMoiwZ4Aj0tw4MlSU-LslIlNxOQ9EaDa4e-UEi9dMnmTLO0-XObK69uji2lOQj4tgcFu4sHw","token_type":"Bearer","refresh_token":"1//052GKQLZdBQE6CgYIARAAGAUSNwF-L9IrZnssg8M_DxeJ69I0Fs1tlUwuCZuR2GErOJ2NJY4McQ7SH8n1F5CnBLYH6hASXK4z3aw","expiry":"2020-11-25T02:46:36.2072247-05:00"}
+
+[VRP-mirror03]
+type = drive
+scope = drive.readonly
+root_folder_id = 1_gznoLHx38g_ts7xM_TZY6yqZ67hPap5
+token = {"access_token":"ya29.a0AfH6SMCUR4vkjD0MvvfPEjO4BxGkYHjRdWYgQ0oLlMKx_Xrv-pGC3DJbJviDAKyhK76iOPsj7EGdPW1pKR7GHzVX_ieeudTgSAVPHde2GKQUEbLtv9wHgKyh5AEYCVpvJAgSSFEX92es685evNuelZLHbCA-j3LdL69HUg","token_type":"Bearer","refresh_token":"1//01GWJt3LcE8IxCgYIARAAGAESNwF-L9IrPAgzpz01ianGaO1o1gAN_cIktfPQVDgC5SnHkEmpuCV1WMJdBsxjVtRZfKvC8xiZod8","expiry":"2020-11-02T19:38:17.8139291-05:00"}
+
+[VRP-mirror05]
+type = drive
+scope = drive.readonly
+root_folder_id = 1wBHqw0ytgR2OTdx5VMf1oJ2c7fSi0Cxq
+token = {"access_token":"ya29.A0AfH6SMC4saxP6AU99ha5drOSe8oUlg6dhXLz-orkwHOwvnHwCyWtNi5O4L2QoxIaZOdqVSUYvg3c8ZCpg8pIpqyKUe3dlvlirOG-QZQODGO0ANwuKElKG5xLjFeA2gPYzff0xVtsBLmoStonYTBHtcfnkEO6I_u38pUsqBzF5hLg3A","token_type":"Bearer","refresh_token":"1//01CPJ3heCKpCQCgYIARAAGAESNwF-L9Ir8kWmdWcmKszc2epwi9rsn_vrmcboi3cUj-raZeVxg2uinEvlioK9uuP-s36fsna8m6A","expiry":"2020-11-02T19:38:12.8555132-05:00"}
+
