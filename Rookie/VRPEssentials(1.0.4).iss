@@ -109,7 +109,7 @@ Source: "C:\Rookie\RookieInstaller\*"; DestDir: "{app}"; Flags: ignoreversion re
 ; NOTE: Don't use "Flags: ignoreversion" on any shared system files
 
 [Icons]
-Name: "{autodesktop}\{#MyAppName3}"; Filename: "{app}\{#MyAppExeName3}"; IconFilename: "{app}\Icons\launcher.ico"; Tasks: desktopicon
+Name: "{autodesktop}\{#MyAppName3}"; Filename: "{app}\{#MyAppExeName3}"; IconFilename: "{app}\Icons\Rookie.ico"; Tasks: desktopicon
 Name: "{autodesktop}\{#MyAppName2}"; Filename: "{app}\bats\{#MyAppExeName2}"; IconFilename: "{app}\Icons\VDL.ico"; Tasks: VDL
 Name: "{autodesktop}\{#MyAppName4}"; Filename: "{app}\bats\{#MyAppExeName4}"; IconFilename: "{app}\Icons\QU.ico"; Tasks: QU
 Name: "{autodesktop}\VRP - Rclone Tutorial"; Filename: "{app}\VRP - Rclone Tutorial.url"; IconFilename: "{app}\Icons\YT.ico"; Tasks: TUTRC
