@@ -1,0 +1,25 @@
+[VRP-mirror02]
+type = drive
+scope = drive.readonly
+root_folder_id = 1wiLMVBl--cPDL7IoQZBrBWA1R0ePvMqU
+token = {"access_token":"ya29.a0AfH6SMCffH2zrE9PG4Bjku-0aOFDqMc85KDscTAx1gEnte7NU3XB-4bySiBzKYG8w-pc0T_HxEH2d-iKMIZOYuKKEDayYuFozR4MwJuERItHEvomlaoRY0YoRfdGdFW-8Q8zgP1Pet3sB-MWk59DYPefVu-hWCAajn6wVuiI6qZEsA","token_type":"Bearer","refresh_token":"1//052GKQLZdBQE6CgYIARAAGAUSNwF-L9IrZnssg8M_DxeJ69I0Fs1tlUwuCZuR2GErOJ2NJY4McQ7SH8n1F5CnBLYH6hASXK4z3aw","expiry":"2020-12-29T08:36:47.0064306-05:00"}
+
+[VRP-mirror03]
+type = drive
+scope = drive.readonly
+root_folder_id = 1_gznoLHx38g_ts7xM_TZY6yqZ67hPap5
+token = {"access_token":"ya29.a0AfH6SMDxIkb_E7tcNKQGC-dXbjHqkE-wyteVkkvCXEZvzbg1AE_Hs9J-Qu26ZacuTSKwAiIQklYaGfM12DkJo3uOKWzwxQcTyezUM-X4iKr39PNp43FU58XsrCsrPU7DMff0T5_gAfWpBchXJpZg1-oDXuiZOMbIO4eCPG7u-L0zhg","token_type":"Bearer","refresh_token":"1//01GWJt3LcE8IxCgYIARAAGAESNwF-L9IrPAgzpz01ianGaO1o1gAN_cIktfPQVDgC5SnHkEmpuCV1WMJdBsxjVtRZfKvC8xiZod8","expiry":"2020-12-29T08:36:20.7383305-05:00"}
+
+[VRP-mirror05]
+type = drive
+scope = drive.readonly
+root_folder_id = 1wBHqw0ytgR2OTdx5VMf1oJ2c7fSi0Cxq
+token = {"access_token":"ya29.a0AfH6SMDq1j2NipnFjuMyB-WUQ4bWv8yv8zIJ870XAbFT09zic5kWnAYxweno_MjGd2yj6e47sPZJmfUPMckhiHwIz8ARJYWcEk8zV1fUnlmOUJYXtFqczFBt9Kx6gMiRovUMDokKrOYTR6nuMnQN3yKrHS_M8SkXPtpEh33cFyanEQ","token_type":"Bearer","refresh_token":"1//01CPJ3heCKpCQCgYIARAAGAESNwF-L9Ir8kWmdWcmKszc2epwi9rsn_vrmcboi3cUj-raZeVxg2uinEvlioK9uuP-s36fsna8m6A","expiry":"2020-12-29T08:34:06.9175511-05:00"}
+
+[VRP-mirror06]
+type = drive
+scope = drive.readonly
+root_folder_id = 18lfK96EL38zuQ8pZs4-WiMzD4cC7HZEX
+token = {"access_token":"ya29.a0AfH6SMDv2aput2lqMvobY32hAMB2kkhzFlMUubE8lNl1MHisgi5pm74WaxKqQuaFngd4YhtRUzwECwz7ZsCbxEp-Zu-9pRj6uSTbAebPF86ZQO_K1dSqh6MpS73aBaPvbXDSY8HdIMbj8HXSfIG5H2Ytk82sk5ezud4rMB_MJK31xQ","token_type":"Bearer","refresh_token":"1//05h3rdozHv1LkCgYIARAAGAUSNwF-L9IrNGTExJotxk9FE-BkCphnhOKr7SGA-TGo4nXYD1Ojr2yIy9XgVLt2ZpipjAAMIRsvHFI","expiry":"2020-12-29T08:23:23.6292211-05:00"}
+team_drive = 0AMPXHcJJJ6dPUk9PVA
+
