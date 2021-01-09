@@ -1,4 +1,0 @@
-Message: An error occurred invoking the method.  The destination thread no longer exists.
-Data: System.Collections.ListDictionaryInternal
-Source: System.Windows.Forms
-TargetSite: Void WaitForWaitHandle(System.Threading.WaitHandle)
