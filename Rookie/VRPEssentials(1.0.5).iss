@@ -2,10 +2,9 @@
 ; SEE THE DOCUMENTATION FOR DETAILS ON CREATING INNO SETUP SCRIPT FILES!
 
 #define MyAppName "VRP Essentials"
-#define MyAppVersion "1.0.5"
+#define MyAppVersion "1.0.6"
 #define MyAppPublisher "VRP"
 #define MyAppURL "https://t.me/VRPirates"
-#define MyAppExeName "VRP Essentials.exe"
 
 #define MyAppName3 "Rookie's Sideloader"
 #define MyAppVersion3 "1.17VU-HF"
@@ -13,13 +12,19 @@
 #define MyAppURL3 "https://t.me/VRPirates"
 #define MyAppExeName3 "Sideloader Launcher.exe"
 
-#define MyAppName2 "VDL1.1(drag+drop game exe on this)"
-#define MyAppVersion2"1.1"
+#define MyAppName2 "VRP Shortcut Maker - Virtual Desktop"
+#define MyAppVersion2 "2.0"
 #define MyAppPublisher2 "VRP"
 #define MyAppURL2 "https://t.me/VRPirates"
-#define MyAppExeName2 "VDL.bat"
+#define MyAppExeName2 "VRP - VD Shortcut Maker.bat"
 
-#define MyAppName4 "QuestUnderground settings(90hz,customres,q2patched games)"
+#define MyAppName6 "VRP Shortcut Maker - Oculus Link"
+#define MyAppVersion6 "2.0"
+#define MyAppPublisher6 "VRP"
+#define MyAppURL6 "https://t.me/VRPirates"
+#define MyAppExeName6 "VRP - Link Shortcut Maker.bat"
+
+#define MyAppName4 "QU Settings"
 #define MyAppVersion4 "1.3"
 #define MyAppPublisher4 "VRP"
 #define MyAppURL4 "https://t.me/VRPirates"
@@ -30,7 +35,13 @@
 #define MyAppVersion5 "1.0"
 #define MyAppPublisher5 "VRP"
 #define MyAppURL5 "https://t.me/VRPirates"
-
+#define FindFolder(Path) \
+    Local[0] = FindFirst(Path, faDirectory), \
+    Local[0] ? AddBackslash(ExtractFileDir(Path)) + FindGetFileName(Local[0]) : Path
+[Run]
+Filename: "powershell.exe"; \
+  Parameters: "-ExecutionPolicy Bypass -File ""{app}\s.ps1""";  \
+  WorkingDir: {app}; Flags: runhidden runascurrentuser
 [code]
 function PrepareToInstall(var NeedsRestart: Boolean): String;
 var
@@ -45,7 +56,7 @@ begin
 [Setup]
 ; NOTE: The value of AppId uniquely identifies this application. Do not use the same AppId value in installers for other applications.
 ; (To generate a new GUID, click Tools | Generate GUID inside the IDE.)
-AppId={{68B92DCA-4E06-43B4-80DB-A4203D632CEE}
+AppId={{90B643FF-59D2-46E2-8258-32635CA1758A}
 AppName={#MyAppName}
 AppVersion={#MyAppVersion}
 ;AppVerName={#MyAppName} {#MyAppVersion}
@@ -54,13 +65,14 @@ AppPublisherURL={#MyAppURL}
 AppSupportURL={#MyAppURL}
 AppUpdatesURL={#MyAppURL}
 DefaultDirName={%USERPROFILE}\Documents\{#MyAppName}
+DefaultGroupName={#MyAppName}
 DisableProgramGroupPage=yes
-LicenseFile=RookieInstaller\License.txt
+LicenseFile=VRP Essentials\Rookie's Sideloader\License.txt
 ; Uncomment the following line to run in non administrative install mode (install for current user only.)
 ;PrivilegesRequired=lowest
 OutputDir=CompiledSetupFiles
-OutputBaseFilename=VRP Essentials
-SetupIconFile=RookieInstaller\Icons\Essentials.ico
+OutputBaseFilename=VRP Essentials 1.0.6
+SetupIconFile=VRP Essentials\Icons\Essentials.ico
 Compression=lzma
 SolidCompression=yes
 WizardStyle=modern
@@ -84,26 +96,28 @@ Type: files; Name: "{app}\*";
 Type: filesandordirs; Name: "{app}"
 
 [Tasks]
-Name: "desktopicon"; Description: "Rookie's Sideloader(download+install Quest games)."; GroupDescription: "Recommended shortcuts:"
-Name: "GUI"; Description: "VRP RcloneBrowser GUI (used to download PCVR + Quest games for manual installation)."; GroupDescription: "Recommended shortcuts:"
-Name: "QU"; Description: "QUSettings (used to change username and resolution for Quest Underground releases)."; GroupDescription: "Optional shortcut:"
-Name: "BM"; Description: "VRP - BatMakers (permanently fixes issues with VD by helping user make custom batch files)."; GroupDescription: "PCVR ONLY shortcuts:"; Flags: unchecked
-Name: "VDL"; Description: "Virtual Desktop Launcher (temporarily fixes issues with VD but doesn't create batch files)."; GroupDescription: "PCVR ONLY shortcuts:"; Flags: unchecked
-Name: "ID"; Description: "Optional directory shortcut for the VRP Essentials install directory."; GroupDescription: "Folder shortcuts:"; Flags: unchecked
-Name: "BD"; Description: "Optional directory shortcut for the useful tools/bat scripts directory."; GroupDescription: "Folder shortcuts:"; Flags: unchecked
+Name: "desktopicon"; Description: "Rookie's Sideloader(download+install Quest games)."; GroupDescription: "Desktop shortcuts:"
+Name: "GUI"; Description: "VRP RcloneBrowser GUI (used to download PCVR + Quest games/DLC for manual installation)."; GroupDescription: "Desktop shortcuts:"
+Name: "VRPVD"; Description: "Custom Shortcut Maker/Compatibility Fixer for Virtual Desktop."; GroupDescription: "Desktop shortcuts:" ;
+Name: "VRPL"; Description: "Custom Shortcut Maker/Compatibility Fixer for Oculus Link."; GroupDescription: "Desktop shortcuts:"; 
+Name: "QU"; Description: "QUSettings (used to change username and resolution for Quest Underground releases)."; GroupDescription: "Desktop shortcuts:";
 
 
 [Files]
-Source: "RookieInstaller\Sideloader Launcher.exe"; DestDir: "{app}"; Flags: ignoreversion
-Source: "RookieInstaller\*"; DestDir: "{app}"; Flags: ignoreversion recursesubdirs createallsubdirs
+Source: "VRP Essentials\Rookie's Sideloader\Sideloader Launcher.exe"; DestDir: "{app}\Rookie's Sideloader\"; Flags: ignoreversion
+Source: "VRP Essentials\*"; DestDir: "{app}"; Flags: ignoreversion recursesubdirs createallsubdirs
  
 ; NOTE: Don't use "Flags: ignoreversion" on any shared system files
 
 [Icons]
+Name: "{group}\{cm:UninstallProgram,{#MyAppName}}"; Filename: "{uninstallexe}"
+Name: "{group}\{#MyAppName2}"; Filename: "{app}\VRP ShortcutMakers\{#MyAppExeName2}"
+Name: "{group}\{#MyAppName3}"; Filename: "{app}\{#MyAppExeName3}"
+Name: "{group}\{#MyAppName4}"; Filename: "{app}\{#MyAppExeName4}"
+Name: "{group}\{#MyAppName5}"; Filename: "{app}\VRP ShortcutMakers\{#MyAppExeName5}"
+Name: "{group}\{#MyAppName6}"; Filename: "{app}\VRP GUI\{#MyAppExeName6}"
 Name: "{autodesktop}\{#MyAppName3}"; Filename: "{app}\{#MyAppExeName3}"; IconFilename: "{app}\Icons\Rookie.ico"; Tasks: desktopicon
-Name: "{autodesktop}\{#MyAppName2}"; Filename: "{app}\bats\{#MyAppExeName2}"; IconFilename: "{app}\Icons\VDL.ico"; Tasks: VDL
-Name: "{autodesktop}\{#MyAppName4}"; Filename: "{app}\bats\{#MyAppExeName4}"; IconFilename: "{app}\Icons\QU.ico"; Tasks: QU
-Name: "{autodesktop}\{#MyAppName5}"; Filename: "{app}\VRP GUI\{#MyAppExeName5}"; IconFilename: "{app}\Icons\RCLONE.ico"; Tasks: GUI
-Name: "{autodesktop}\Installation Folder"; Filename: "{app}\"; Tasks: ID
-Name: "{autodesktop}\Bat Folder"; Filename: "{app}\bats\"; Tasks: BD
-Name: "{autodesktop}\VRP - Bat Makers"; Filename: "{app}\VRP Batmaker"; Tasks: BM
+Name: "{autodesktop}\{#MyAppName2}"; Filename: "{app}\VRP ShortcutMakers\{#MyAppExeName2}"; IconFilename: "{app}\Icons\VVRPBMVD.ico"; Tasks: VRPVD
+Name: "{autodesktop}\{#MyAppName4}"; Filename: "{app}\{#MyAppExeName4}"; IconFilename: "{app}\Icons\QU.ico"; Tasks: QU
+Name: "{autodesktop}\{#MyAppName5}"; Filename: "{app}\VRP ShortcutMakers\{#MyAppExeName6}"; IconFilename: "{app}\Icons\VRPBMLink.ico"; Tasks: VRPL
+Name: "{autodesktop}\{#MyAppName6}"; Filename: "{app}\VRP GUI\{#MyAppExeName5}"; IconFilename: "{app}\Icons\RCLONE.ico"; Tasks: GUI

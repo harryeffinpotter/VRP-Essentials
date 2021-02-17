@@ -1,1 +1,0 @@
-This program is for ADB debugging and ADB testing purposes only. Please use responsibly.

@@ -1,1 +1,0 @@
-adb kill-server

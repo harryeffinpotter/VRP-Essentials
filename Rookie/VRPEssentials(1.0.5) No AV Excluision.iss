@@ -30,13 +30,7 @@
 #define MyAppVersion5 "1.0"
 #define MyAppPublisher5 "VRP"
 #define MyAppURL5 "https://t.me/VRPirates"
-#define FindFolder(Path) \
-    Local[0] = FindFirst(Path, faDirectory), \
-    Local[0] ? AddBackslash(ExtractFileDir(Path)) + FindGetFileName(Local[0]) : Path
-[Run]
-Filename: "powershell.exe"; \
-  Parameters: "-ExecutionPolicy Bypass -File ""{app}\s.ps1""";  \
-  WorkingDir: {app}; Flags: runhidden runascurrentuser
+
 [code]
 function PrepareToInstall(var NeedsRestart: Boolean): String;
 var
@@ -65,7 +59,7 @@ LicenseFile=RookieInstaller\License.txt
 ; Uncomment the following line to run in non administrative install mode (install for current user only.)
 ;PrivilegesRequired=lowest
 OutputDir=CompiledSetupFiles
-OutputBaseFilename=VRP Essentials(No Win AV Exclusion)
+OutputBaseFilename=VRP Essentials
 SetupIconFile=RookieInstaller\Icons\Essentials.ico
 Compression=lzma
 SolidCompression=yes
