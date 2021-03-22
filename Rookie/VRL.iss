@@ -21,7 +21,7 @@ LicenseFile=VRP Essentials\Rookie's Sideloader\License.txt
 ;PrivilegesRequired=lowest
 OutputDir=CompiledSetupFiles
 OutputBaseFilename=Shortcut Maker 1.1
-SetupIconFile=VRLauncher\VRL.ico
+SetupIconFile="VRP Essentials\Icons\SM.ico"
 Compression=lzma
 SolidCompression=yes
 WizardStyle=modern
@@ -46,8 +46,8 @@ Type: filesandordirs; Name: "{app}"
 Name: "desktopicon"; Description: "Desktop shortcut?";
 
 [Files]
-Source: "VRLauncher\VRP Shortcut Maker.exe"; DestDir: "{app}"; Flags: ignoreversion
-Source: "VRLauncher\*"; DestDir: "{app}"; Flags: ignoreversion recursesubdirs createallsubdirs
+Source: "VRP Essentials\Shortcut Maker\VRP Shortcut Maker.exe"; DestDir: "{app}"; Flags: ignoreversion
+Source: "VRP Essentials\Shortcut Maker\*"; DestDir: "{app}"; Flags: ignoreversion recursesubdirs createallsubdirs
  
 ; NOTE: Don't use "Flags: ignoreversion" on any shared system files
 

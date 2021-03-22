@@ -6,8 +6,10 @@ set /p exepath=<temp2.txt
 set /p exewithoutVD=<temp3.txt
 set /p gamedir=<GDir.txt
 set /p gamename=<gname.txt
+set /p steamargs=<tempSteam.txt
+
 cd %gamedir%
-echo %exewithoutVD% > "%gamedir%\%gamename%_Custom_Launcher.bat"
+echo %exewithoutVD%%steamargs% > "%gamedir%\%gamename%_Custom_Launcher.bat"
 echo Set oWS = WScript.CreateObject("WScript.Shell") > CreateShortcut.vbs
 echo sLinkFile = "%HOMEDRIVE%%HOMEPATH%\Desktop\%gamename%.lnk" >> CreateShortcut.vbs
 echo Set oLink = oWS.CreateShortcut(sLinkFile) >> CreateShortcut.vbs
