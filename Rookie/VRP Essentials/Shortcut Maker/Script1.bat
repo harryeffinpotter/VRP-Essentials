@@ -9,7 +9,7 @@ set /p filename=<filename.txt
 set /p steamargs=<tempSteam.txt
 
 cd %gamedir%
-echo %fullpathVD%%steamargs% > "%gamedir%\%gamename%_Launcher_VD.bat"
+echo %fullpathVD% %steamargs% > "%gamedir%\%gamename%_Launcher_VD.bat"
 echo Set oWS = WScript.CreateObject("WScript.Shell") > CreateShortcut.vbs
 echo sLinkFile = "%HOMEDRIVE%%HOMEPATH%\Desktop\%gamename%(Virtual Desktop).lnk" >> CreateShortcut.vbs
 echo Set oLink = oWS.CreateShortcut(sLinkFile) >> CreateShortcut.vbs

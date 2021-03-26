@@ -6,8 +6,8 @@
 #define MyAppPublisher "VRP"
 #define MyAppURL "https://t.me/VRPirates"
 
-#define MyAppName2 "Shortcut Maker GUI 1.2"
-#define MyAppVersion2 "1.2"
+#define MyAppName2 "Shortcut Maker GUI 1.2.1"
+#define MyAppVersion2 "1.2.1"
 #define MyAppPublisher2 "VRP"
 #define MyAppURL2 "https://t.me/VRPirates"
 #define MyAppExeName2 "VRP Shortcut Maker.exe"

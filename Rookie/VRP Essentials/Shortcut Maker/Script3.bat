@@ -9,7 +9,7 @@ set /p filename=<filename.txt
 set /p steamargs=<tempSteam.txt
 
 cd %gamedir%
-echo %fullagainst%%steamargs% > "%gamedir%\%gamename%_custom_EXE_Against.bat"
+echo %fullagainst% %steamargs% > "%gamedir%\%gamename%_custom_EXE_Against.bat"
 echo Set oWS = WScript.CreateObject("WScript.Shell") > CreateShortcut.vbs
 echo sLinkFile = "%HOMEDRIVE%%HOMEPATH%\Desktop\%gamename%(Launched against Custom EXE).lnk" >> CreateShortcut.vbs
 echo Set oLink = oWS.CreateShortcut(sLinkFile) >> CreateShortcut.vbs
